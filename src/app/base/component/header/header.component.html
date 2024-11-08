@@ -1,14 +1,14 @@
 <ion-header id="main-content" class="header-page">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+      <ion-menu-button class="btn-menu"></ion-menu-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-app>
   <!-- Menu principal -->
-  <ion-menu contentId="main-content" #menu>
+  <ion-menu contentId="main-content" >
     <ion-header>
       <ion-toolbar>
         <ion-title>Menu Content</ion-title>
@@ -23,13 +23,14 @@
           />
         </ion-avatar>
         <div style="border: none;">
-          <ion-label>Bienvenida/o {{username}}</ion-label>
+          <ion-label>Bienvenida/o {{username}}
+          </ion-label>
         </div>
       </ion-item>
       <ion-list>
-        <ion-item button (click)="navigateTo('/inicio/asistencia')">Inicio</ion-item> 
-        <ion-item button (click)="navigateTo('/perfil')">Perfil</ion-item>
-        <ion-item button (click)="navigateTo('/configuracion')">Configuración</ion-item>
+        <ion-item button (click)="navigateTo('inicio/asistencia')">inicio</ion-item>
+        <ion-item button (click)="navigateTo('inicio/perfil')">Perfil</ion-item>
+        <ion-item button (click)="navigateTo('inicio/configuracion')">Configuración</ion-item>
         <ion-item button (click)="cerrarSesion()">Cerrar Sesión</ion-item>
       </ion-list>
     </ion-content>

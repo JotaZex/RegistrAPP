@@ -17,6 +17,14 @@ const routes: Routes = [
         loadChildren: () =>
           import('./../../paginas/qr/qr.module').then((m) => m.QrPageModule),
       },
+      {
+        path: 'configuracion',
+        loadChildren: () => import('./../../paginas/configuracion/configuracion.module').then( m => m.ConfiguracionPageModule)
+      },
+      {
+        path: 'perfil',
+        loadChildren: () => import('./../../paginas/perfil/perfil.module').then( m => m.PerfilPageModule)
+      },
     ],
   },
 ];

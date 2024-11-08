@@ -8,12 +8,13 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./inicio.page.scss'],
 })
 export class InicioPage implements OnInit {
+  pageTitle: string = 'Inicio';
   // Usuario
   user = {
     "username": "",
     "nombre": "",
     "apellido": "",
-    "correo": ""
+    "email": ""
   }
 
   constructor(private router:Router, private auth:AuthService) { 
@@ -23,13 +24,14 @@ export class InicioPage implements OnInit {
       username: "";
       nombre: "";
       apellido: "";
-      correo: "";
+      email: "";
     };
     this.user.username = state.username;
     this.user.nombre = state.nombre;
     this.user.apellido = state.apellido;
-    this.user.correo = state.correo;
+    this.user.email = state.email;
   };
+
 
   ngOnInit() {
   }

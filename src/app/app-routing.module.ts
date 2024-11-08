@@ -18,15 +18,7 @@ const routes: Routes = [
   {
     path: '**',
     loadChildren: () => import('./error/error.module').then( m => m.ErrorPageModule)
-  },  {
-    path: 'perfil',
-    loadChildren: () => import('./paginas/perfil/perfil.module').then( m => m.PerfilPageModule)
   },
-  {
-    path: 'configuracion',
-    loadChildren: () => import('./paginas/configuracion/configuracion.module').then( m => m.ConfiguracionPageModule)
-  },
-
 ];
 
 @NgModule({

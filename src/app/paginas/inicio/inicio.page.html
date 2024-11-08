@@ -1,18 +1,10 @@
 <ion-content [fullscreen]="true" id="inicio-container">
-  <!-- header -->
+  
   <app-header></app-header>
 
-  Bienvenido  {{user.username}}
-  <ion-tabs>
-    <ion-tab-bar slot="bottom">
-      <ion-tab-button tab="asistencia">
-        <ion-icon name="home"></ion-icon>
-        Inicio
-      </ion-tab-button>
-      <ion-tab-button tab="qr">
-        <ion-icon name="camera"></ion-icon>
-        Qr
-      </ion-tab-button>
-    </ion-tab-bar>
-  </ion-tabs>
+  <div style="text-align: center; padding: 70px;">
+    <h1>Hola, {{ user.username }}</h1>
+    <h3>Bienvenido/a al sistema de asistencia</h3>
+    <p>¡Listo para gestionar tu asistencia de hoy!</p>
+  </div>
 </ion-content>
