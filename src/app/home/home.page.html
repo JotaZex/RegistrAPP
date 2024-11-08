@@ -1,17 +1,16 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      ResgistrAPP
+    <ion-title class="custom-font" style="text-align: center;">
+      RegistrAPP
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  
-  
+  <ion-card>
+    <ion-input [(ngModel)]="user.username" type="text" label="Usuario" label-placement="floating" fill="solid" placeholder="Ingresar Usuario"></ion-input>
+    <ion-input [(ngModel)]="user.password"  type="password" label="Contraseña" label-placement="floating" fill="solid" placeholder="Ingresar Contraseña"></ion-input>
+    <ion-button (click)="validar()" expand="block">Ingresar</ion-button>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  </ion-card>
 </ion-content>
