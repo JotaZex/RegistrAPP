@@ -1,16 +1,23 @@
-<ion-header [translucent]="true">
-  <ion-toolbar color="Tertiary">
-    <ion-title>
-      ResgistrAPP
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="custom-font" style="text-align: center;">
+      RegistrAPP
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  
-  <ion-input id="username" type="text" placeholder="Username"></ion-input>
-  <ion-input id="password" type="password" placeholder="Password"></ion-input>
-  <ion-button id="login" expand="block" color="primary" >Login</ion-button>
+  <ion-card style="margin:150px 10px 50px 10px; padding: 40px;">
+    <ion-input [(ngModel)]="user.username" type="text" label="Usuario" label-placement="floating" fill="solid" placeholder="Ingresar Usuario"></ion-input>
+    <ion-input [(ngModel)]="user.password"  type="password" label="Contraseña" label-placement="floating" fill="solid" placeholder="Ingresar Contraseña"></ion-input>
+    <ion-button (click)="validar()" expand="block">Ingresar</ion-button>
+    <ion-text class="texrecu" [routerLink]="['/recuperar']" style="display: block; margin-bottom: 10px;">
+      ¿Has olvidado tu <b class="bold-blue">contraseña</b>?
+   </ion-text>
+   <div *ngIf="errorMsg" class="error-msg">
+    <ion-text color="danger">{{ errorMsg }}</ion-text>
+  </div>
 
- 
+
+  </ion-card>
 </ion-content>
